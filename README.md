@@ -1,2 +1,1 @@
-# SignalR-NET-Core-Angular
-SignalR-NET-Core-Angular
+# signalR-net-core-angular
