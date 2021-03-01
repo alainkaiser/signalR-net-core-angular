@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as signalr from '@microsoft/signalr';
+import ILiveData from './models/live-data-dto.model';
 
 @Injectable({
   providedIn: 'root',
@@ -24,8 +25,11 @@ export class SignalrService {
   };
 
   public addLiveDataListener = () => {
-    this.connection.on('LiveData', (data: string) => {
+    this.connection.on('LiveData', (data: ILiveData) => {
       console.log(data);
+
+      console.log(data.firstName);
+      console.log(data.lastName);
     });
   };
 }
